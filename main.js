@@ -1,8 +1,8 @@
 let arr = [];
 
 
-input = arr.toString();
-total = eval(input.replace(/,/g, ""));
+let input = arr.toString();
+let total = eval(input.replace(/,/g, ""));
 
 const buttons = document.querySelectorAll("button");
 const zero = document.querySelector("#zero");
@@ -22,7 +22,7 @@ const subtract = document.querySelector("#subtract");
 const divide = document.querySelector("#divide");
 const decimal = document.querySelector("#decimal");
 const clear = document.querySelector("#clear");
-
+const display = document.querySelector("#display>p")
 
 zero.addEventListener("click", zeroFunc);
 one.addEventListener("click", oneFunc);
@@ -45,67 +45,87 @@ decimal.addEventListener("click", decimalFunc);
 
 function zeroFunc(){
   arr.push("0");
-  console.log(arr);
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
 }
 function oneFunc(){
   arr.push("1");
-  console.log(arr);
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
 }
 function twoFunc(){
   arr.push("2");
-  console.log(arr);
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
 }
 function threeFunc(){
   arr.push("3");
-  console.log(arr);
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
 }
 function fourFunc(){
   arr.push("4");
-  console.log(arr);
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
 }
 function fiveFunc(){
   arr.push("5");
-  console.log(arr);
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
 }
 function sixFunc(){
   arr.push("6");
-  console.log(arr);
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
 }
 function sevenFunc(){
   arr.push("7");
-  console.log(arr);
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
 }
 function eightFunc(){
   arr.push("8");
-  console.log(arr);
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
 }
 function nineFunc(){
   arr.push("9");
-  console.log(arr);
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
 }
 function addFunc(){
   arr.push("+");
-  console.log(arr);
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
 }
 function subtractFunc(){
   arr.push("-");
-  console.log(arr);
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
 }
 function multiplyFunc(){
   arr.push("*");
-  console.log(arr);
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
 }
 function divideFunc(){
   arr.push("/");
-  console.log(arr);
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
 }
-
+function decimalFunc(){
+  arr.push(".");
+  input = arr.toString().replace(/,/g, "");
+  display.innerHTML = input;
+}
 function clearFunc(){
   arr = [];
+  display.innerHTML = "";
 }
-
 function equalsFunc(){
   input = arr.toString();
   total = eval(input.replace(/,/g, ""));
-  console.log(total);
+  clearFunc();
+  arr.push(total);
+  display.innerHTML = total;
 }

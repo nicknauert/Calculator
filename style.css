@@ -10,7 +10,8 @@ body {
   font-family: 'Fjalla One', sans-serif;
   color: white;
   font-size: 24px;
-  background-color: rgb(33, 28, 66);
+  background-image: url("img/spacetater.png");
+  background-size: cover;
   padding-top: 15px;
 }
 
