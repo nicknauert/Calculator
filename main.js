@@ -1,10 +1,10 @@
 // var snd = new Audio("file.wav"); // buffers automatically when created
 // snd.play();
 
-var bSnd = new Audio("./snd/item.m4a");
-bSnd.volume = .2;
-var otherSnd = new Audio("./snd/coin.m4a");
-otherSnd.volume = .2;
+// var bSnd = new Audio("./snd/item.m4a");
+// bSnd.volume = .1;
+// var otherSnd = new Audio("./snd/coin.m4a");
+// otherSnd.volume = .1;
 let arr = [];
 let input = arr.toString();
 let total = eval(input.replace(/,/g, ""));
@@ -49,105 +49,111 @@ decimal.addEventListener("click", decimalFunc);
 
 
 function zeroFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push("0");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function oneFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push("1");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function twoFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push("2");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function threeFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push("3");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function fourFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push("4");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function fiveFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push("5");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function sixFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push("6");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function sevenFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push("7");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function eightFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push("8");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function nineFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push("9");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function addFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push("+");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function subtractFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push("-");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function multiplyFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push("*");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function divideFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push("/");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function decimalFunc(){
-  bSnd.play();
+  // bSnd.play();
   arr.push(".");
   input = arr.toString().replace(/,/g, "");
   display.innerHTML = input;
 }
 function clearFunc(){
-  otherSnd.play();
+  // otherSnd.play();
   arr = [];
   display.innerHTML = "";
 }
 function equalsFunc(){
-  otherSnd.play();
+  // otherSnd.play();
   input = arr.toString();
   total = eval(input.replace(/,/g, ""));
+  rounded = total.toFixed(2);
   clearFunc();
-  arr.push(total);
-  display.innerHTML = total;
+  if (rounded % 1 == 0){
+    arr.push(total);
+    display.innerHTML = total;
+  } else {
+    arr.push(rounded);
+    display.innerHTML = rounded;
+  }
 }
